@@ -95,11 +95,11 @@ ggpairs(drought_exp_clean, # data frame
 
 Choose 3 pairs of variables to compare. Make notes of those comparisons below.    
 
-**insert comparison 1 here**  
+**shoot mass and total mass have a strong positive correlation pearson r 0.902**  
 
-**insert comparison 2 here**  
+**shoot mass is positevely correlated with root mass pearson's r = 0.553**  
 
-**insert comparison 3 here**
+**leaf dry mass and speciifc leave area are not correlated, pearson r = 0.033**
 
 ## Preliminary visualizations  
 
