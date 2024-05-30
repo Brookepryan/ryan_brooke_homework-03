@@ -95,11 +95,11 @@ ggpairs(drought_exp_clean, # data frame
 
 Choose 3 pairs of variables to compare. Make notes of those comparisons below.    
 
-**shoot mass and total mass have a strong positive correlation pearson r 0.902**  
+**shoot mass and total mass have a strong positive correlation Pearson's r 0.902**  
 
-**shoot mass is positively correlated with root mass pearson's r = 0.553**  
+**shoot mass is positively correlated with root mass Pearson's r = 0.553**  
 
-**leaf dry mass and specific leave area are not correlated, pearson r = 0.033**
+**leaf dry mass and specific leave area are not correlated, Pearson's r = 0.033**
 
 ## Preliminary visualizations  
 
@@ -123,7 +123,7 @@ ggplot(data = drought_exp_clean, # data frame
               height = 0) # not jittering points up and down
 ```
 
-** plants iwth larger biomass seem to have larger ranges than plants with lower biomass. Grindelia has highest biomass, acmispon has lowest**
+** plants with larger biomass seem to have larger ranges than plants with lower biomass. Grindelia has highest biomass, Acmispon glaber has lowest**
 
 ### how does total biomass differ between water treatments?
 
@@ -146,7 +146,7 @@ ggplot(data = drought_exp_clean, # data frame
   geom_point() # scatterplot
 ```
 
-**sla doesnt eem to affect total mass visualy, but statistically it does. **
+**sla doesnt seem to affect total mass visualy, but statistically it does. **
 
 # Model construction
 
@@ -156,7 +156,7 @@ What is the null model?
 
 What is the saturated model?  
 
-1. **total mass predicted by SLA, water treatment,a nd species**  
+1. **total mass predicted by SLA, water treatment, and species**  
 
 In class we are going to try two more models:  
 
