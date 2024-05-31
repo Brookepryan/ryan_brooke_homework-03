@@ -216,6 +216,8 @@ Jill Pelto’s paintings Lorraine Woodruff-Long’s warming strips quilt Stefani
 
 ##a. Describe in words what an affective visualization could look like for your personal data (3-5 sentences). (2 points)
 
+### An affective visualization for my data would represent the total mg of caffiene consumed in a sitting as a function of form and reason.
+
 ## b. Create a sketch (on paper) of your idea. (2 points)
 
 Include a photo of this sketch in your submission.

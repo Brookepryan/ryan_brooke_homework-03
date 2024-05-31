@@ -208,6 +208,14 @@ model3 <- lm(total_g ~ sla + species_name,
 plot(model3)
 ```
 
+## 4. total biomass as a function of water treatment and species
+```{r}
+model4 <- lm(total_g ~ water_treatment + species_name,
+             data = drought_exp_clean)
+
+plot(model4)
+```
+
 # Model selection
 
 From the `MuMIn` package
@@ -216,7 +224,8 @@ From the `MuMIn` package
 model.sel(model0,
           model1, 
           model2, 
-          model3)
+          model3,
+          model4)
 ```
 
 Out of the four models we have tried, the best model is the one that includes **model with the lowest AIC, model 1. it has all three predictors an's wriitng: all three predictors**  
@@ -323,15 +332,18 @@ flextable::as_flextable(model1)
 # another option for a single model
 gtsummary::tbl_regression(model1)
 
+
 # comparing models
 modelsummary::modelsummary( # this function takes a list of models
   list( 
     "null" = model0, # "model name" = model object
     "model 1" = model1,
     "model 2" = model2,
-    "model 3" = model3
+    "model 3" = model3,
+    "model 4" = model4
   )
 ) 
+
 
 ```
 
