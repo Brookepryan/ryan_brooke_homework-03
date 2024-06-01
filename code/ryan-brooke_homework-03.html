@@ -8,7 +8,7 @@
 
 <meta name="author" content="Brooke Ryan">
 
-<title>ryan-brooke_homework-03</title>
+<title>ENVS 193DS Homework 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,8 +68,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="ryan-brooke_homework-03_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="ryan-brooke_homework-03_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="ryan-brooke_homework-03_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="ryan-brooke_homework-03_files/libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
-<script src="ryan-brooke_homework-03_files/libs/tabwid-1.1.3/tabwid.js"></script>
 
 
 </head>
@@ -82,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ryan-brooke_homework-03</h1>
+<h1 class="title">ENVS 193DS Homework 3</h1>
 </div>
 
 
@@ -105,8 +103,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="link-to-forked-repository-httpsgithub.combrookepryanryan_brooke_homework-03.git" class="level1">
-<h1>link to forked repository: https://github.com/Brookepryan/ryan_brooke_homework-03.git</h1>
+<section id="link-to-forked-repository" class="level1">
+<h1>link to forked repository:</h1>
+<p>https://github.com/Brookepryan/ryan_brooke_homework-03.git</p>
 </section>
 <section id="reading-in-packagesdata" class="level1">
 <h1>reading in packages/data</h1>
@@ -119,30 +118,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># visualizing pairs</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># model selection</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MuMIn)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># model predictions</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># model tables</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>drought_exp <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="at">path =</span> <span class="fu">here</span>(<span class="st">"data"</span>, </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Valliere_etal_EcoApps_Data.xlsx"</span>),</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                         <span class="at">sheet =</span> <span class="st">"First Harvest"</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># quick look at data </span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(drought_exp)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(drought_exp)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># visualizing pairs</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># model selection</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MuMIn)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># model predictions</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># model tables</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>drought_exp <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="at">path =</span> <span class="fu">here</span>(<span class="st">"data"</span>, </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Valliere_etal_EcoApps_Data.xlsx"</span>),</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                         <span class="at">sheet =</span> <span class="st">"First Harvest"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># quick look at data </span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(drought_exp)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(drought_exp)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [70 × 13] (S3: tbl_df/tbl/data.frame)
  $ Species            : chr [1:70] "ENCCAL" "ENCCAL" "ENCCAL" "ENCCAL" ...
@@ -190,6 +191,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a> })</span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="a.-make-a-table-or-list-of-all-the-models-from-class-and-the-last-one-you-constructed-on-your-own.-write-a-caption-for-your-table" class="level1">
+<h1>a. Make a table or list of all the models from class and the last one you constructed on your own. Write a caption for your table</h1>
 <section id="null-model" class="level2">
 <h2 class="anchored" data-anchor-id="null-model">0. Null model</h2>
 <div class="cell">
@@ -295,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="total-biomass-as-a-function-of-water-treatment-and-species" class="level2">
 <h2 class="anchored" data-anchor-id="total-biomass-as-a-function-of-water-treatment-and-species">4. total biomass as a function of water treatment and species</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(total_g <span class="sc">~</span> water_treatment <span class="sc">+</span>species_name,</span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(total_g <span class="sc">~</span> water_treatment <span class="sc">+</span> species_name,</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> drought_exp_clean)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -328,562 +332,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = total_g ~ water_treatment + species_name, data = drought_exp_clean)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.157087 -0.046953 -0.003733  0.041244  0.192657 
+
+Coefficients:
+                                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                             0.05455    0.02451   2.225  0.02973 *  
+water_treatmentWell watered             0.11695    0.01733   6.746 5.90e-09 ***
+species_nameEncelia californica         0.21774    0.03243   6.714 6.70e-09 ***
+species_nameEschscholzia californica    0.23164    0.03243   7.143 1.22e-09 ***
+species_nameGrindelia camporum          0.31335    0.03243   9.662 5.53e-14 ***
+species_nameNasella pulchra             0.22881    0.03243   7.055 1.72e-09 ***
+species_namePenstemon centranthifolius  0.05003    0.03243   1.543  0.12799    
+species_nameSalvia leucophylla          0.12020    0.03243   3.706  0.00045 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.07252 on 62 degrees of freedom
+Multiple R-squared:  0.7535,    Adjusted R-squared:  0.7257 
+F-statistic: 27.08 on 7 and 62 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="making-a-table" class="level1">
 <h1>Making a table</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># one option for a single model</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>flextable<span class="sc">::</span><span class="fu">as_flextable</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="tabwid"><style>.cl-7cdd8478{}.cl-7cc99332{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7cc9936e{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:italic;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7cd17f34{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-7cd17f52{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-7cd1c9c6{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1c9da{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1c9e4{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1c9ee{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1c9f8{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1c9f9{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca02{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca0c{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca16{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca20{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca21{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca2a{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca34{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca3e{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca3f{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca48{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca52{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca5c{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca66{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca67{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca70{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca7a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca7b{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca84{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca8e{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca8f{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1ca98{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1caa2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1caa3{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1caac{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cab6{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cac0{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cac1{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1caca{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cad4{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cad5{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cade{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cae8{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cae9{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1caf2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1caf3{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cafc{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cafd{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb06{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb10{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb11{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb1a{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb1b{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb24{width:3.113in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb2e{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb2f{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb38{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb39{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7cd1cb42{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-7cdd8478"><thead><tr style="overflow-wrap:break-word;"><th class="cl-7cd1c9c6"><p class="cl-7cd17f34"><span class="cl-7cc99332"></span></p></th><th class="cl-7cd1c9da"><p class="cl-7cd17f52"><span class="cl-7cc99332">Estimate</span></p></th><th class="cl-7cd1c9e4"><p class="cl-7cd17f52"><span class="cl-7cc99332">Standard Error</span></p></th><th class="cl-7cd1c9ee"><p class="cl-7cd17f52"><span class="cl-7cc99332">t value</span></p></th><th class="cl-7cd1c9f8"><p class="cl-7cd17f52"><span class="cl-7cc99332">Pr(&gt;|t|)</span></p></th><th class="cl-7cd1c9f9"><p class="cl-7cd17f34"><span class="cl-7cc99332"></span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-7cd1ca02"><p class="cl-7cd17f34"><span class="cl-7cc99332">(Intercept)</span></p></td><td class="cl-7cd1ca0c"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.055</span></p></td><td class="cl-7cd1ca16"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.025</span></p></td><td class="cl-7cd1ca20"><p class="cl-7cd17f52"><span class="cl-7cc99332">2.225</span></p></td><td class="cl-7cd1ca21"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0297</span></p></td><td class="cl-7cd1ca2a"><p class="cl-7cd17f34"><span class="cl-7cc99332">  *</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1ca34"><p class="cl-7cd17f34"><span class="cl-7cc99332">water_treatmentWell watered</span></p></td><td class="cl-7cd1ca3e"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.117</span></p></td><td class="cl-7cd1ca3f"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.017</span></p></td><td class="cl-7cd1ca48"><p class="cl-7cd17f52"><span class="cl-7cc99332">6.746</span></p></td><td class="cl-7cd1ca52"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0000</span></p></td><td class="cl-7cd1ca5c"><p class="cl-7cd17f34"><span class="cl-7cc99332">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1ca66"><p class="cl-7cd17f34"><span class="cl-7cc99332">species_nameEncelia californica</span></p></td><td class="cl-7cd1ca67"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.218</span></p></td><td class="cl-7cd1ca70"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.032</span></p></td><td class="cl-7cd1ca7a"><p class="cl-7cd17f52"><span class="cl-7cc99332">6.714</span></p></td><td class="cl-7cd1ca7b"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0000</span></p></td><td class="cl-7cd1ca84"><p class="cl-7cd17f34"><span class="cl-7cc99332">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1ca66"><p class="cl-7cd17f34"><span class="cl-7cc99332">species_nameEschscholzia californica</span></p></td><td class="cl-7cd1ca67"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.232</span></p></td><td class="cl-7cd1ca70"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.032</span></p></td><td class="cl-7cd1ca7a"><p class="cl-7cd17f52"><span class="cl-7cc99332">7.143</span></p></td><td class="cl-7cd1ca7b"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0000</span></p></td><td class="cl-7cd1ca84"><p class="cl-7cd17f34"><span class="cl-7cc99332">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1ca8e"><p class="cl-7cd17f34"><span class="cl-7cc99332">species_nameGrindelia camporum</span></p></td><td class="cl-7cd1ca8f"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.313</span></p></td><td class="cl-7cd1ca98"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.032</span></p></td><td class="cl-7cd1caa2"><p class="cl-7cd17f52"><span class="cl-7cc99332">9.662</span></p></td><td class="cl-7cd1caa3"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0000</span></p></td><td class="cl-7cd1caac"><p class="cl-7cd17f34"><span class="cl-7cc99332">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1cab6"><p class="cl-7cd17f34"><span class="cl-7cc99332">species_nameNasella pulchra</span></p></td><td class="cl-7cd1cac0"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.229</span></p></td><td class="cl-7cd1cac1"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.032</span></p></td><td class="cl-7cd1caca"><p class="cl-7cd17f52"><span class="cl-7cc99332">7.055</span></p></td><td class="cl-7cd1cad4"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0000</span></p></td><td class="cl-7cd1cad5"><p class="cl-7cd17f34"><span class="cl-7cc99332">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1ca66"><p class="cl-7cd17f34"><span class="cl-7cc99332">species_namePenstemon centranthifolius</span></p></td><td class="cl-7cd1ca67"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.050</span></p></td><td class="cl-7cd1ca70"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.032</span></p></td><td class="cl-7cd1ca7a"><p class="cl-7cd17f52"><span class="cl-7cc99332">1.543</span></p></td><td class="cl-7cd1ca7b"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.1280</span></p></td><td class="cl-7cd1ca84"><p class="cl-7cd17f34"><span class="cl-7cc99332">   </span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7cd1cade"><p class="cl-7cd17f34"><span class="cl-7cc99332">species_nameSalvia leucophylla</span></p></td><td class="cl-7cd1cae8"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.120</span></p></td><td class="cl-7cd1cae9"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.032</span></p></td><td class="cl-7cd1caf2"><p class="cl-7cd17f52"><span class="cl-7cc99332">3.706</span></p></td><td class="cl-7cd1caf3"><p class="cl-7cd17f52"><span class="cl-7cc99332">0.0005</span></p></td><td class="cl-7cd1cafc"><p class="cl-7cd17f34"><span class="cl-7cc99332">***</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-7cd1cafd"><p class="cl-7cd17f52"><span class="cl-7cc9936e">Signif. codes: 0 &lt;= '***' &lt; 0.001 &lt; '**' &lt; 0.01 &lt; '*' &lt; 0.05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-7cd1cb24"><p class="cl-7cd17f34"><span class="cl-7cc99332"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-7cd1cb24"><p class="cl-7cd17f34"><span class="cl-7cc99332">Residual standard error: 0.07252 on 62 degrees of freedom</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-7cd1cb24"><p class="cl-7cd17f34"><span class="cl-7cc99332">Multiple R-squared: 0.7535, Adjusted R-squared: 0.7257</span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-7cd1cb24"><p class="cl-7cd17f34"><span class="cl-7cc99332">F-statistic: 27.08 on 62 and 7 DF, p-value: 0.0000</span></p></td></tr></tfoot></table></div>
-</div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># another option for a single model</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>gtsummary<span class="sc">::</span><span class="fu">tbl_regression</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<div id="gofzczwsxa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gofzczwsxa table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#gofzczwsxa thead, #gofzczwsxa tbody, #gofzczwsxa tfoot, #gofzczwsxa tr, #gofzczwsxa td, #gofzczwsxa th {
-  border-style: none;
-}
-
-#gofzczwsxa p {
-  margin: 0;
-  padding: 0;
-}
-
-#gofzczwsxa .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#gofzczwsxa .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#gofzczwsxa .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#gofzczwsxa .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#gofzczwsxa .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#gofzczwsxa .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#gofzczwsxa .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#gofzczwsxa .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#gofzczwsxa .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#gofzczwsxa .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#gofzczwsxa .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#gofzczwsxa .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#gofzczwsxa .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#gofzczwsxa .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#gofzczwsxa .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gofzczwsxa .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#gofzczwsxa .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#gofzczwsxa .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#gofzczwsxa .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gofzczwsxa .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#gofzczwsxa .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gofzczwsxa .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#gofzczwsxa .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gofzczwsxa .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#gofzczwsxa .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#gofzczwsxa .gt_left {
-  text-align: left;
-}
-
-#gofzczwsxa .gt_center {
-  text-align: center;
-}
-
-#gofzczwsxa .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#gofzczwsxa .gt_font_normal {
-  font-weight: normal;
-}
-
-#gofzczwsxa .gt_font_bold {
-  font-weight: bold;
-}
-
-#gofzczwsxa .gt_font_italic {
-  font-style: italic;
-}
-
-#gofzczwsxa .gt_super {
-  font-size: 65%;
-}
-
-#gofzczwsxa .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#gofzczwsxa .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#gofzczwsxa .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#gofzczwsxa .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#gofzczwsxa .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#gofzczwsxa .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#gofzczwsxa .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header gt_col_headings">
-<th id="<strong>Characteristic</strong>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
-<th id="<strong>Beta</strong>" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
-<th id="<strong>95% CI</strong><span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
-<th id="<strong>p-value</strong>" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">water_treatment</td>
-<td class="gt_row gt_center" headers="estimate"><br>
-</td>
-<td class="gt_row gt_center" headers="ci"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Drought stressed</td>
-<td class="gt_row gt_center" headers="estimate">—</td>
-<td class="gt_row gt_center" headers="ci">—</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Well watered</td>
-<td class="gt_row gt_center" headers="estimate">0.12</td>
-<td class="gt_row gt_center" headers="ci">0.08, 0.15</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">species_name</td>
-<td class="gt_row gt_center" headers="estimate"><br>
-</td>
-<td class="gt_row gt_center" headers="ci"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Acmispon glaber</td>
-<td class="gt_row gt_center" headers="estimate">—</td>
-<td class="gt_row gt_center" headers="ci">—</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Encelia californica</td>
-<td class="gt_row gt_center" headers="estimate">0.22</td>
-<td class="gt_row gt_center" headers="ci">0.15, 0.28</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Eschscholzia californica</td>
-<td class="gt_row gt_center" headers="estimate">0.23</td>
-<td class="gt_row gt_center" headers="ci">0.17, 0.30</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Grindelia camporum</td>
-<td class="gt_row gt_center" headers="estimate">0.31</td>
-<td class="gt_row gt_center" headers="ci">0.25, 0.38</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Nasella pulchra</td>
-<td class="gt_row gt_center" headers="estimate">0.23</td>
-<td class="gt_row gt_center" headers="ci">0.16, 0.29</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Penstemon centranthifolius</td>
-<td class="gt_row gt_center" headers="estimate">0.05</td>
-<td class="gt_row gt_center" headers="ci">-0.01, 0.11</td>
-<td class="gt_row gt_center" headers="p.value">0.13</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Salvia leucophylla</td>
-<td class="gt_row gt_center" headers="estimate">0.12</td>
-<td class="gt_row gt_center" headers="ci">0.06, 0.19</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-</tr>
-</tbody><tfoot class="gt_footnotes">
-<tr class="even">
-<td colspan="4" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> CI = Confidence Interval</td>
-</tr>
-</tfoot>
-
-</table>
-
-</div>
-</div>
-</div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>modelsummary<span class="sc">::</span><span class="fu">modelsummary</span>( <span class="co"># this function takes a list of models</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>( </span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"null"</span> <span class="ot">=</span> model0, <span class="co"># "model name" = model object</span></span>
@@ -899,16 +381,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_fygi6pvwzvwcy38h1xt6</title>
+    <title>tinytable_wldcgw3yoquroxjyadzz</title>
     <style>
-.table td.tinytable_css_kwy55rml5qm40bgk25y5, .table th.tinytable_css_kwy55rml5qm40bgk25y5 {    border-bottom: solid 0.1em #d3d8dc; }
-.table td.tinytable_css_7nh76n658eki9peal6sq, .table th.tinytable_css_7nh76n658eki9peal6sq {    text-align: left; }
-.table td.tinytable_css_ofwai7w2s1yz3do3acei, .table th.tinytable_css_ofwai7w2s1yz3do3acei {    text-align: center; }
-.table td.tinytable_css_0jsiljxogbhm8on4n0aw, .table th.tinytable_css_0jsiljxogbhm8on4n0aw {    text-align: center; }
-.table td.tinytable_css_zma1kg357pb2w4fyc3g3, .table th.tinytable_css_zma1kg357pb2w4fyc3g3 {    text-align: center; }
-.table td.tinytable_css_hwz18eaxyobbennedrio, .table th.tinytable_css_hwz18eaxyobbennedrio {    text-align: center; }
-.table td.tinytable_css_q0fhhzmjqj8zppvrdtfm, .table th.tinytable_css_q0fhhzmjqj8zppvrdtfm {    text-align: center; }
-.table td.tinytable_css_3sf3sutenqootyhhxy8c, .table th.tinytable_css_3sf3sutenqootyhhxy8c {    border-bottom: solid 0.05em black; }
+.table td.tinytable_css_9kc4fuwziojg5h9bkwit, .table th.tinytable_css_9kc4fuwziojg5h9bkwit {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_wv8bvzpxfptkip43maka, .table th.tinytable_css_wv8bvzpxfptkip43maka {    text-align: left; }
+.table td.tinytable_css_bbovs4mm4wjt3821wx15, .table th.tinytable_css_bbovs4mm4wjt3821wx15 {    text-align: center; }
+.table td.tinytable_css_zm4djxwjjxskjb1jkxa0, .table th.tinytable_css_zm4djxwjjxskjb1jkxa0 {    text-align: center; }
+.table td.tinytable_css_5yiw5lyw8v0jfmw6v7a1, .table th.tinytable_css_5yiw5lyw8v0jfmw6v7a1 {    text-align: center; }
+.table td.tinytable_css_8cod1yn0qy8g19ipfdie, .table th.tinytable_css_8cod1yn0qy8g19ipfdie {    text-align: center; }
+.table td.tinytable_css_8z14bye2r3dsx7uuveod, .table th.tinytable_css_8z14bye2r3dsx7uuveod {    text-align: center; }
+.table td.tinytable_css_odrghbh3ffkv9y1l0m3o, .table th.tinytable_css_odrghbh3ffkv9y1l0m3o {    border-bottom: solid 0.05em black; }
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -926,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
   
     <div class="container">
-      <table class="table table-borderless" id="tinytable_fygi6pvwzvwcy38h1xt6" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_wldcgw3yoquroxjyadzz" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -1145,12 +627,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
 
     <script>
-      function styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(i, j, css_id) {
-        var table = document.getElementById("tinytable_fygi6pvwzvwcy38h1xt6");
+      function styleCell_tinytable_wmjt08lhabhd2dylhx4c(i, j, css_id) {
+        var table = document.getElementById("tinytable_wldcgw3yoquroxjyadzz");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_fygi6pvwzvwcy38h1xt6');
+        var table = document.getElementById('tinytable_wldcgw3yoquroxjyadzz');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -1158,8 +640,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_tinytable_rtzu2l1jq8jqffxrjbi6(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_fygi6pvwzvwcy38h1xt6");
+      function spanCell_tinytable_wmjt08lhabhd2dylhx4c(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_wldcgw3yoquroxjyadzz");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -1186,174 +668,174 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         targetCell.colSpan = colspan;
       }
 
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 0, 'tinytable_css_kwy55rml5qm40bgk25y5') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 1, 'tinytable_css_kwy55rml5qm40bgk25y5') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 2, 'tinytable_css_kwy55rml5qm40bgk25y5') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 3, 'tinytable_css_kwy55rml5qm40bgk25y5') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 4, 'tinytable_css_kwy55rml5qm40bgk25y5') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 5, 'tinytable_css_kwy55rml5qm40bgk25y5') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(1, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(2, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(3, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(4, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(5, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(6, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(7, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(8, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(9, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(10, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(11, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(12, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(13, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(14, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(15, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(16, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(17, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(19, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(20, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(21, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(22, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(23, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(24, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(25, 0, 'tinytable_css_7nh76n658eki9peal6sq') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(1, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(2, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(3, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(4, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(5, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(6, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(7, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(8, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(9, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(10, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(11, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(12, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(13, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(14, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(15, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(16, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(17, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(19, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(20, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(21, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(22, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(23, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(24, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(25, 1, 'tinytable_css_ofwai7w2s1yz3do3acei') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(1, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(2, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(3, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(4, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(5, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(6, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(7, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(8, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(9, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(10, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(11, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(12, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(13, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(14, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(15, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(16, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(17, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(19, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(20, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(21, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(22, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(23, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(24, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(25, 2, 'tinytable_css_0jsiljxogbhm8on4n0aw') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(1, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(2, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(3, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(4, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(5, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(6, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(7, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(8, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(9, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(10, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(11, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(12, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(13, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(14, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(15, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(16, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(17, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(19, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(20, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(21, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(22, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(23, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(24, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(25, 3, 'tinytable_css_zma1kg357pb2w4fyc3g3') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(1, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(2, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(3, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(4, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(5, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(6, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(7, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(8, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(9, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(10, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(11, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(12, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(13, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(14, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(15, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(16, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(17, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(19, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(20, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(21, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(22, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(23, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(24, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(25, 4, 'tinytable_css_hwz18eaxyobbennedrio') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(0, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(1, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(2, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(3, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(4, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(5, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(6, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(7, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(8, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(9, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(10, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(11, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(12, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(13, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(14, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(15, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(16, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(17, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(19, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(20, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(21, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(22, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(23, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(24, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(25, 5, 'tinytable_css_q0fhhzmjqj8zppvrdtfm') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 0, 'tinytable_css_3sf3sutenqootyhhxy8c') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 1, 'tinytable_css_3sf3sutenqootyhhxy8c') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 2, 'tinytable_css_3sf3sutenqootyhhxy8c') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 3, 'tinytable_css_3sf3sutenqootyhhxy8c') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 4, 'tinytable_css_3sf3sutenqootyhhxy8c') })
-window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqffxrjbi6(18, 5, 'tinytable_css_3sf3sutenqootyhhxy8c') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 0, 'tinytable_css_9kc4fuwziojg5h9bkwit') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 1, 'tinytable_css_9kc4fuwziojg5h9bkwit') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 2, 'tinytable_css_9kc4fuwziojg5h9bkwit') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 3, 'tinytable_css_9kc4fuwziojg5h9bkwit') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 4, 'tinytable_css_9kc4fuwziojg5h9bkwit') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 5, 'tinytable_css_9kc4fuwziojg5h9bkwit') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(1, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(2, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(3, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(4, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(5, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(6, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(7, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(8, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(9, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(10, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(11, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(12, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(13, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(14, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(15, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(16, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(17, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(19, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(20, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(21, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(22, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(23, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(24, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(25, 0, 'tinytable_css_wv8bvzpxfptkip43maka') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(1, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(2, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(3, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(4, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(5, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(6, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(7, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(8, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(9, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(10, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(11, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(12, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(13, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(14, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(15, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(16, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(17, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(19, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(20, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(21, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(22, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(23, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(24, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(25, 1, 'tinytable_css_bbovs4mm4wjt3821wx15') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(1, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(2, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(3, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(4, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(5, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(6, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(7, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(8, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(9, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(10, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(11, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(12, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(13, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(14, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(15, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(16, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(17, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(19, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(20, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(21, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(22, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(23, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(24, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(25, 2, 'tinytable_css_zm4djxwjjxskjb1jkxa0') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(1, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(2, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(3, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(4, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(5, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(6, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(7, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(8, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(9, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(10, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(11, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(12, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(13, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(14, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(15, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(16, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(17, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(19, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(20, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(21, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(22, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(23, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(24, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(25, 3, 'tinytable_css_5yiw5lyw8v0jfmw6v7a1') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(1, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(2, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(3, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(4, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(5, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(6, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(7, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(8, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(9, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(10, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(11, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(12, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(13, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(14, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(15, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(16, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(17, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(19, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(20, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(21, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(22, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(23, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(24, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(25, 4, 'tinytable_css_8cod1yn0qy8g19ipfdie') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(0, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(1, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(2, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(3, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(4, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(5, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(6, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(7, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(8, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(9, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(10, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(11, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(12, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(13, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(14, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(15, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(16, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(17, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(19, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(20, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(21, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(22, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(23, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(24, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(25, 5, 'tinytable_css_8z14bye2r3dsx7uuveod') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 0, 'tinytable_css_odrghbh3ffkv9y1l0m3o') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 1, 'tinytable_css_odrghbh3ffkv9y1l0m3o') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 2, 'tinytable_css_odrghbh3ffkv9y1l0m3o') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 3, 'tinytable_css_odrghbh3ffkv9y1l0m3o') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 4, 'tinytable_css_odrghbh3ffkv9y1l0m3o') })
+window.addEventListener('load', function () { styleCell_tinytable_wmjt08lhabhd2dylhx4c(18, 5, 'tinytable_css_odrghbh3ffkv9y1l0m3o') })
     </script>
 
   
@@ -1363,50 +845,31 @@ window.addEventListener('load', function () { styleCell_tinytable_rtzu2l1jq8jqff
 </div>
 </section>
 <section id="caption" class="level1">
-<h1>caption:</h1>
-<p><strong>Table 1: Comparison of Linear Regression Models for Predicting Total Growth</strong></p>
+<h1>Caption:</h1>
+<section id="table-1-comparison-of-linear-regression-models-for-predicting-total-growth" class="level3">
+<h3 class="anchored" data-anchor-id="table-1-comparison-of-linear-regression-models-for-predicting-total-growth">Table 1: Comparison of Linear Regression Models for Predicting Total Growth</h3>
 <p>This table shows the coefficients, standard errors, and performance metrics for four linear regression models that predict total growth biomass (<code>total_g</code>) based on water treatment and species name. Model 4, which includes both predictors, shows the best performance with the highest R² (0.754) and lowest AIC (-159.2), indicating the most reliable fit for the data.</p>
-<ol start="2" type="a">
-<li>Write a 5-6 sentence “statistical methods” section. (8 points) Your answer should be in paragraph form and include:</li>
+<ol start="5" type="a">
+<li>Statistical Methods</li>
 </ol>
-<p>how you addressed the central question(s) (i.e.&nbsp;to examine the influence of ____, ____, and ____ on _____, I…) how you chose the final model (i.e.&nbsp;to determine the model that best described ____, I…) how you visually determined that your final model conformed to the assumptions of a linear model (i.e.&nbsp;to evaluate linear model assumptions, I…)</p>
-<p>I examined the influence of water tr</p>
-<ol start="3" type="a">
-<li>Make a visualization of the model predictions with underlying data for your “best” model. (20 points) Show and annotate all your code. For full credit:</li>
-</ol>
-<p>make the underlying data more transparent than the model predictions display species names in full (not as species codes like ENCCAL or ESCCAL) display water treatment types in full (not as WW or DS) represent well-watered and drought stressed treatments with different colors use colors that are not the default ggplot() colors facet your plot by species remove the legend finalize the plot Note Make sure that the only output is the visualization!</p>
+<p>To examine the influence of specific leaf area (SLA), species, and water treatment on total plant biomass of plants species native to southern California, I conducted a series of linear regression models. I used a null model to establish a baselines, and then four subsequent models comparing different combinations of predictors (SLA, species, water treatment). To determine the model that best described total biomass, I used Akaike Information Criterion (AIC) and R² values. I decided that the model that best described variation in plant bioass is model 4, because it had the highest R² of 0.754 and lowest AIC of -159.2. To evaluate linear model assumptions, I visually inspected diagnostic plots for normality, homoscedasticity, linearity, and outliers.</p>
+</section>
+</section>
+<section id="c.-make-a-visualization-of-the-model-predictions-with-underlying-data-for-your-best-model.-20-points-show-and-annotate-all-your-code.-for-full-credit" class="level1">
+<h1>c.&nbsp;Make a visualization of the model predictions with underlying data for your “best” model. (20 points) Show and annotate all your code. For full credit:</h1>
+<ul>
+<li>make the underlying data more transparent than the model predictions</li>
+<li>display species names in full (not as species codes like ENCCAL or ESCCAL)</li>
+<li>display water treatment types in full (not as WW or DS)</li>
+<li>represent well-watered and drought stressed treatments with different colors - use colors that are not the default ggplot() colors facet your plot by species remove the legend finalize the plot</li>
+<li>Note Make sure that the only output is the visualization!</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>model_4_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> drought_exp_clean, </span>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> drought_exp_clean, </span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> water_treatment, </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> total_g, </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> species_name)) <span class="sc">+</span> </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="dv">0</span>)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(model_4_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ryan-brooke_homework-03_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> drought_exp_clean, </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> water_treatment, </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> total_g, </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">shape =</span> species_name)) <span class="sc">+</span> </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape palette can deal with a maximum of 6 discrete values because more
-than 6 becomes difficult to discriminate
-ℹ you have requested 7 values. Consider specifying shapes manually if you need
-  that many have them.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 10 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> total_g)) <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> species_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1416,30 +879,16 @@ than 6 becomes difficult to discriminate
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> drought_exp_clean, </span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> water_treatment, </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> total_g)) <span class="sc">+</span> </span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> species_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> drought_exp_clean, </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> water_treatment, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> total_g, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> species_name)) <span class="sc">+</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> species_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="ryan-brooke_homework-03_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> drought_exp_clean, </span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> water_treatment, </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> total_g, </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> species_name)) <span class="sc">+</span> </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> species_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ryan-brooke_homework-03_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1450,61 +899,41 @@ than 6 becomes difficult to discriminate
 </ol>
 <p>what predictors “best” described total mass (include model statistics here)? on average, what differences did you find between water treatments? on average, what differences did you find between species?</p>
 </section>
-<section id="problem-2.-affective-visualization-24-points" class="level1">
-<h1>Problem 2. Affective visualization (24 points)</h1>
-<p>In this problem, you will create an affective visualization using your personal data in preparation for workshop during week 10.</p>
-<p>In lecture, we talked about the three vertices of data visualization: 1) exploratory, 2) affective, and 3) communicative. We’ve done a lot of exploratory and communicative visualization, but have yet to think about affective visualization.</p>
-<p>When thinking of affective visualization, you can expand your ideas of what data visualization could be. Some examples of affective visualizations include:</p>
-<p>Jill Pelto’s paintings Lorraine Woodruff-Long’s warming strips quilt Stefanie Posavec and Giorgia Lupi’s Dear Data project Before starting, update your spreadsheet of observations.</p>
-<p>##a. Describe in words what an affective visualization could look like for your personal data (3-5 sentences). (2 points)</p>
-<section id="b.-create-a-sketch-on-paper-of-your-idea.-2-points" class="level2">
-<h2 class="anchored" data-anchor-id="b.-create-a-sketch-on-paper-of-your-idea.-2-points">b. Create a sketch (on paper) of your idea. (2 points)</h2>
-<p>Include a photo of this sketch in your submission.</p>
+<section id="problem-2.-affective-visualization" class="level1">
+<h1>Problem 2. Affective visualization</h1>
+<p>##a. What would an affective visualization look like for my personal data?</p>
+<section id="an-affective-visualization-of-my-data-would-include-as-many-variables-as-possible.-for-this-i-would-probably-be-visualizing-each-observation-individually-and-grouping-them-by-day.-i-want-to-represent-mg-form-pleasurepurpose-and-hours-of-sleep-at-the-very-least.-i-think-a-drawing-similar-to-the-dear-data-project-would-be-most-fitting-to-accomplsih-this." class="level3">
+<h3 class="anchored" data-anchor-id="an-affective-visualization-of-my-data-would-include-as-many-variables-as-possible.-for-this-i-would-probably-be-visualizing-each-observation-individually-and-grouping-them-by-day.-i-want-to-represent-mg-form-pleasurepurpose-and-hours-of-sleep-at-the-very-least.-i-think-a-drawing-similar-to-the-dear-data-project-would-be-most-fitting-to-accomplsih-this.">An affective visualization of my data would include as many variables as possible. For this, I would probably be visualizing each observation individually and grouping them by day. I want to represent mg, form, pleasure/purpose, and hours of sleep at the very least. I think a drawing similar to the “dear data” project would be most fitting to accomplsih this.</h3>
 </section>
-<section id="c.-make-a-draft-of-your-visualization.-12-points" class="level2">
-<h2 class="anchored" data-anchor-id="c.-make-a-draft-of-your-visualization.-12-points">c.&nbsp;Make a draft of your visualization. (12 points)</h2>
-<p>Feel free to be creative with this! You do not have to do this in R. You could create a sculpture, painting, textile object, etc.</p>
-<p>If you are making your visualization in R, show the annotated code and the output.</p>
-<p>If you are making your visualization outside of R, include a photo of your visualization in your submission.</p>
+<section id="b.-visualization-sketch" class="level2">
+<h2 class="anchored" data-anchor-id="b.-visualization-sketch">b. Visualization sketch:</h2>
 </section>
-<section id="d.-write-an-artist-statement.-8-points" class="level2">
-<h2 class="anchored" data-anchor-id="d.-write-an-artist-statement.-8-points">d.&nbsp;Write an artist statement. (8 points)</h2>
+<section id="c.-visualization-draft" class="level2">
+<h2 class="anchored" data-anchor-id="c.-visualization-draft">c.&nbsp;Visualization draft:</h2>
+</section>
+<section id="d.-write-an-artist-statement." class="level2">
+<h2 class="anchored" data-anchor-id="d.-write-an-artist-statement.">d.&nbsp;Write an artist statement.</h2>
 <p>An artist statement gives the audience context to understand your work. Write 4-5 sentences to address:</p>
 <p>the content of your piece (what are you showing?) the influences (what did techniques/artists/etc. did you find influential in creating your work?) the form of your work (written code, watercolor, oil painting, etc.) your process (how did you create your work?)</p>
 </section>
 </section>
-<section id="problem-3.-statistical-critique-36-points" class="level1">
-<h1>Problem 3. Statistical critique (36 points)</h1>
-<p>At this point, you have seen and created a lot of figures for this class. Revisit the paper you chose for your critique and your homework 2, where you described figures or tables in the text. Address the following in full sentences (3-4 sentences each).</p>
-<p>For this section of your homework, you will be evaluated on the logic, conciseness, and nuance of your critique.</p>
-<section id="a.-revisit-and-summarize-6-points" class="level2">
-<h2 class="anchored" data-anchor-id="a.-revisit-and-summarize-6-points">a. Revisit and summarize (6 points)</h2>
-<p>What are the statistical tests the authors are using to address their main research question?</p>
-<section id="the-authors-are-using-a-one-way-analysis-of-variance-anova-and-two-way-anova-both-followed-by-tukeys-post-hoc-test-to-address-the-question-of-better-understand-the-shell-calcification-responses-of-p.-fucata-to-ocean-acidification-and-to-elucidate-the-molecular-mechanisms-of-this-ecologically-and-economically-important-species-in-response-to-ocean-acidification." class="level3">
-<h3 class="anchored" data-anchor-id="the-authors-are-using-a-one-way-analysis-of-variance-anova-and-two-way-anova-both-followed-by-tukeys-post-hoc-test-to-address-the-question-of-better-understand-the-shell-calcification-responses-of-p.-fucata-to-ocean-acidification-and-to-elucidate-the-molecular-mechanisms-of-this-ecologically-and-economically-important-species-in-response-to-ocean-acidification.">The authors are using a one way analysis of variance (ANOVA) and two-way ANOVA both followed by Tukey’s post hoc test to address the question of better understand the shell calcification responses of P. fucata to ocean acidification, and to elucidate the molecular mechanisms of this ecologically and economically important species in response to ocean acidification.</h3>
+<section id="problem-3.-statistical-critique" class="level1">
+<h1>Problem 3. Statistical critique</h1>
+<section id="a.-revisit-and-summarize" class="level2">
+<h2 class="anchored" data-anchor-id="a.-revisit-and-summarize">a. Revisit and summarize</h2>
+<p>The authors are using a one way analysis of variance (ANOVA) and two-way ANOVA both followed by Tukey’s post hoc test to address the question of better understand the shell calcification responses of P. fucata to ocean acidification. Specifically, they are testing the effects of lowered seawater pH on calcium content and shell hardness.</p>
 </section>
+<section id="b.-visual-clarity" class="level2">
+<h2 class="anchored" data-anchor-id="b.-visual-clarity">b. Visual clarity</h2>
+<p>These visualizations are moderately clear representations to those who are skimming the article or do not know much about marine animal calcification. Some aspects could have been more defined, such as the lack of titles and the y-axis labeled “IcT”, considering I had never heard of that measuring unit so could not immediately understand the plot at first glance. The plots did show summary measurements including mean and standard error. The plots do not show underlying data.</p>
 </section>
-<section id="b.-visual-clarity-10-points" class="level2">
-<h2 class="anchored" data-anchor-id="b.-visual-clarity-10-points">b. Visual clarity (10 points)</h2>
-<p>How clearly did the authors visually represent their statistics in figures? For example, are the x- and y-axes in a logical position? Do they show summary statistics (means and SE, for example) and/or model predictions, and if so, do they show the underlying data?</p>
-<section id="these-visualizations-are-moderately-clear-representations-to-those-who-are-skimming-the-article-or-do-not-know-much-about-marine-animal-calcification.-some-aspects-could-have-been-more-defined-such-as-the-lack-of-titles-and-the-y-axis-labeled-ict-considering-i-had-never-heard-of-that-measuring-unit-so-could-not-immediately-understand-the-plot-at-first-glance.-the-plots-did-show-summary-measurements-including-mean-and-standard-error.-the-plots-do-not-show-underlying-data-." class="level3">
-<h3 class="anchored" data-anchor-id="these-visualizations-are-moderately-clear-representations-to-those-who-are-skimming-the-article-or-do-not-know-much-about-marine-animal-calcification.-some-aspects-could-have-been-more-defined-such-as-the-lack-of-titles-and-the-y-axis-labeled-ict-considering-i-had-never-heard-of-that-measuring-unit-so-could-not-immediately-understand-the-plot-at-first-glance.-the-plots-did-show-summary-measurements-including-mean-and-standard-error.-the-plots-do-not-show-underlying-data-.">These visualizations are moderately clear representations to those who are skimming the article or do not know much about marine animal calcification. Some aspects could have been more defined, such as the lack of titles and the y-axis labeled “IcT”, considering I had never heard of that measuring unit so could not immediately understand the plot at first glance. The plots did show summary measurements including mean and standard error. The plots do not show underlying data .</h3>
+<section id="c.-aesthetic-clarity" class="level2">
+<h2 class="anchored" data-anchor-id="c.-aesthetic-clarity">c.&nbsp;Aesthetic clarity</h2>
+<p>The plots are not cluttered at all, I would say that they are almost too bland and uninteresting. The data: ink ratio is good considering they are bar plots.</p>
 </section>
-</section>
-<section id="c.-aesthetic-clarity-10-points" class="level2">
-<h2 class="anchored" data-anchor-id="c.-aesthetic-clarity-10-points">c.&nbsp;Aesthetic clarity (10 points)</h2>
-<p>How well did the authors handle “visual clutter”? How would you describe the the data:ink ratio?</p>
-<section id="the-plots-are-not-cluttered-at-all-i-would-say-that-they-are-almost-too-bland-and-uninteresting.-the-data-ink-ratio-is-good-considering-they-are-bar-plots." class="level3">
-<h3 class="anchored" data-anchor-id="the-plots-are-not-cluttered-at-all-i-would-say-that-they-are-almost-too-bland-and-uninteresting.-the-data-ink-ratio-is-good-considering-they-are-bar-plots.">The plots are not cluttered at all, I would say that they are almost too bland and uninteresting. The data: ink ratio is good considering they are bar plots.</h3>
-</section>
-</section>
-<section id="d.-recommendations-can-be-longer-than-4-sentences-10-points" class="level2">
-<h2 class="anchored" data-anchor-id="d.-recommendations-can-be-longer-than-4-sentences-10-points">d.&nbsp;Recommendations (can be longer than 4 sentences, 10 points)</h2>
-<p>What recommendations would you make to make the figure better? What would you take out, add, or change? Provide explanations/justifications for each of your recommendations.</p>
-<section id="i-would-recommend-making-the-box-fill-lighter-to-show-the-bottom-tail-of-the-se-adding-titles-to-both-including-a-key-to-understand" class="level3">
-<h3 class="anchored" data-anchor-id="i-would-recommend-making-the-box-fill-lighter-to-show-the-bottom-tail-of-the-se-adding-titles-to-both-including-a-key-to-understand">I would recommend making the box fill lighter to show the bottom tail of the SE, adding titles to both, including a key to understand…</h3>
-<p>Alternatively, if they did not represent their statistics in a figure, what kind of figure would you recommend to them? Describe the x- and y-axes, with any geometries and aesthetics (colors, etc.). Provide enough explanation such that someone would be able to create the figure you describe in code. Provide explanations/justifications for the figure you would recommend.</p>
-</section>
+<section id="d.-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="d.-recommendations">d.&nbsp;Recommendations</h2>
+<p>I recommend doing a scatter plot to represent each variable instead of a box plot. This way, they could include the underlying data because it is a respectable amount of observations to have in a jitterplot, as well as an errorbarr to provide a clearer respresenattion of mean and standard error. Also, I reccommend specifying IcT as Growth Global Index of length and weight on the y-axis, and even possibly including the equation (IcT = (Ln At - Ln A0)/t]100) somewhere on the plot, or at least in the caption. Lastly, I reccommend including a title for each of their plots, it is confusing to read without one.</p>
 </section>
 </section>
 
