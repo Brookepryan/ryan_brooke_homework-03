@@ -198,9 +198,9 @@ what predictors “best” described total mass (include model statistics here)?
 # Problem 2. Affective visualization
 
 
-##a. What would an affective visualization look like for my personal data? 
+## a. What would an affective visualization look like for my personal data? 
 
-### An affective visualization of my data would include as many variables as possible. For this, I would probably be visualizing each observation individually and grouping them by day. I want to represent mg, form, pleasure/purpose, and hours of sleep at the very least. I think a drawing similar to the "dear data" project would be most fitting to accomplsih this. 
+An affective visualization of my data would include as many variables as possible. For this, I would probably be visualizing each observation individually and grouping them by day. I want to represent mg, form, pleasure/purpose, and hours of sleep at the very least. I think a drawing similar to the "dear data" project would be most fitting to accomplsih this. 
 
 ## b. Visualization sketch: 
 
@@ -230,5 +230,5 @@ The plots are not cluttered at all, I would say that they are almost too bland a
 
 ## d. Recommendations 
 
-I recommend doing a scatter plot to represent each variable instead of a box plot. This way, they could include the underlying data because it is a respectable amount of observations to have in a jitterplot, as well as an errorbarr to provide a clearer respresenattion of mean and standard error. Also, I reccommend specifying IcT as Growth Global Index of length and weight on the y-axis, and even possibly including the equation (IcT = (Ln At - Ln A0)/t]100) somewhere on the plot, or at least in the caption. Lastly, I reccommend including a title for each of their plots, it is confusing to read without one.
+I recommend doing a scatter plot to represent each variable instead of a box plot. This way, they could include the underlying data because it is a respectable amount of observations to have in a jitterplot, as well as an errorbarr to provide a clearer respresentation of mean and standard error. Also, I recommend specifying IcT as Growth Global Index of length and weight on the y-axis, and even possibly including the equation (IcT = (Ln At - Ln A0)/t]100) somewhere on the plot, or at least in the caption. Lastly, I recommend including a title for each of their plots, it is confusing to read without one.
 
