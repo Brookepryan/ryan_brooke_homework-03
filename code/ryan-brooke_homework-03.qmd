@@ -1,7 +1,7 @@
 ---
 title: "ENVS 193DS Homework 3"
 author: "Brooke Ryan"
-format: html
+format: docx
 editor: visual
 ---
 
