@@ -158,15 +158,34 @@ To examine the influence of specific leaf area (SLA), species, and water treatme
 
 # c. Visualization of model 4, the best predictor.
 
-{r, fig.width = 8, fig.height = 5}
 
-suppressMessages({ \# suppress warnings and messages suppressWarnings({
+```{r, fig.width = 8, fig.height = 5}
 
-model4_preds \<- ggpredict(model4, \# getting predictions terms = c("water_treatment", "species_name"))
+suppressMessages({
+  suppressWarnings({
+    
+    model4_preds <- ggpredict(model4, # getting predictions 
+                          terms = c("water_treatment", "species_name"))
+    # plotting predictions + underlying data
+ggplot(model4_preds, 
+       aes(x = x, y = predicted, color = x)) + #plotting predictions 
+  geom_jitter(data = drought_exp_clean, aes(x = water_treatment, y = total_g, color = water_treatment), width = 0.2, alpha = 0.1) + # plotting underlying data 
+     geom_line() + 
+  geom_point() + 
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2) + # representing st error 
+    theme_classic() + 
+  labs(title = "Predicted Impact of Water Treatment on Plant Biomass Across Different Species",x = "Water Treatment", y = "Biomass") +  # adding and changing titles 
+    scale_color_manual(name = "Water Treatment", 
+                       values = c("Well watered" = "seagreen2", "Drought stressed" = "turquoise3")) + # editing colors 
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 7.5), #changing orientation and size of x-axis text 
+        legend.position = "none") + # remove legend
+  facet_wrap(~ group) # facet by species name
+  })
+})
 
-# plotting predictions + underlying data
+```
 
-ggplot(model4_preds, aes(x = x, y = predicted, color = x)) + \# plotting predictions geom_jitter(data = drought_exp_clean, aes(x = water_treatment, y = total_g, color = water_treatment), width = 0.2, alpha = 0.1) + \# plotting underlying data geom_line() + geom_point() + geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2) + \# representing st error theme_classic() + labs(title = "Predicted Impact of Water Treatment on Plant Biomass Across Different Species", \# adding and changing titles x = "Water Treatment", y = "Biomass") + scale_color_manual(name = "Water Treatment", values = c("Well watered" = "seagreen2", "Drought stressed" = "turquoise3")) + \# editing colors theme(panel.grid = element_blank(), axis.text.x = element_text(angle = 45, hjust = 1, size = 7.5), #changing orientation and size of x-axis text legend.position = "none") + \# remove legend facet_wrap(\~ group) \# facet by species name }) })
 
 d.  Figure 1. "Predicted Impact of Water Treatment on Plant Biomass Across Different Species" This visualization compares predicted biomass of various plant species under two water treatment conditions: well watered and drought stressed. The error bars represent the confidence intervals of the predicted values while he underlying data is represented through jitter. Data source: Valliere J. M., J. Zhang, M. R. Sharifi, and P. W.Rundel. 2019. Can we condition native plants to increase drought tolerance and improve restoration success? Ecological Applications 29(3): e01863.10.1002/eap.1863
 
