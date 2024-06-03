@@ -152,7 +152,7 @@ modelsummary::modelsummary( # this function takes a list of models
 
 This table shows the coefficients, standard errors, and performance metrics for four linear regression models that predict total growth biomass (`total_g`) based on water treatment and species name. Model 4, which includes both predictors, shows the best performance with the highest R² (0.754) and lowest AIC (-159.2), indicating the most reliable fit for the data.
 
-e.  Statistical Methods
+# b.Statistical Methods
 
 To examine the influence of specific leaf area (SLA), species, and water treatment on total plant biomass of plants species native to southern California, I conducted a series of linear regression models. I used a null model to establish a baselines, and then four subsequent models comparing different combinations of predictors (SLA, species, water treatment). To determine the model that best described total biomass, I used Akaike Information Criterion (AIC) and R² values. I decided that the model that best described variation in plant biomass is model 4, because it had the highest R² of 0.754 and lowest AIC of -159.2. To evaluate linear model assumptions, I visually inspected diagnostic plots for normality, homoscedasticity, linearity, and outliers.
 
@@ -187,9 +187,11 @@ ggplot(model4_preds,
 ```
 
 
-d.  Figure 1. "Predicted Impact of Water Treatment on Plant Biomass Across Different Species" This visualization compares predicted biomass of various plant species under two water treatment conditions: well watered and drought stressed. The error bars represent the confidence intervals of the predicted values while he underlying data is represented through jitter. Data source: Valliere J. M., J. Zhang, M. R. Sharifi, and P. W.Rundel. 2019. Can we condition native plants to increase drought tolerance and improve restoration success? Ecological Applications 29(3): e01863.10.1002/eap.1863
+# d. Caption
 
-e.  Results Section
+Figure 1. "Predicted Impact of Water Treatment on Plant Biomass Across Different Species" This visualization compares predicted biomass of various plant species under two water treatment conditions: well watered and drought stressed. The error bars represent the confidence intervals of the predicted values while he underlying data is represented through jitter. Data source: Valliere J. M., J. Zhang, M. R. Sharifi, and P. W.Rundel. 2019. Can we condition native plants to increase drought tolerance and improve restoration success? Ecological Applications 29(3): e01863.10.1002/eap.1863
+
+# e.  Results Section
 
 In conclusion, water treatment condition and species type are the most effective predictors of the total mass of native plants in Southern California, as demonstrated by the linear model with the highest R² (0.754) and lowest AIC (-159.2). On average plants in well watered treatment are 0.11695 ± 0.01733g greater than plants in drought stressed treatment. On average, Scarelet Bulgers (Penstemon centranthifolius) were the smallest and Great Valley Gumweed (Grindelia camporum) were the largest. Purple Needlegrass (Nasella pulchra) were, on average, the same size as California Poppy (Eschscholzia californica) were the same
 
@@ -203,11 +205,7 @@ An affective visualization of my data would include as many variables as possibl
 
 ## c. Visualization draft:
 
-## d. Write an artist statement.
-
-An artist statement gives the audience context to understand your work. Write 4-5 sentences to address:
-
-the content of your piece (what are you showing?) the influences (what did techniques/artists/etc. did you find influential in creating your work?) the form of your work (written code, watercolor, oil painting, etc.) your process (how did you create your work?)
+## d. Artist statement.
 
 My piece represents the amount of caffeine I consume per day in milligrams while representing variables such as the amount if sleep I got the night before, the form of caffeine I am consuming, and the reason I consumed the caffeine. I was largely influenced from the "Dear Data" project by Giorgia Lupi and Stefanie Posavec. My work is pen and colored pencil on paper, and I had to do many rough drafts in order to perfect it. I tried out various types of visual representations for each form of caffeine, and the amount of mg it represented, until I found a method that seemed clear.
 
